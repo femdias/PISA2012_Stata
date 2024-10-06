@@ -1,4 +1,4 @@
-# PISA2012_Stata
+# Do-file for reading PISA 2012 in Stata
 Stata do-files to read raw PISA2012 txt files
 
 Older PISA microdata (OECD’s Programme for International Student Assessment) is provided only in .txt format with SAS and SPSS reading files, but lacks Stata equivalents. This repository contains Stata do-files to read PISA 2012 raw files and an R script for automating do-file creation. It could potentially be adapted for other PISA datasets, though I haven't tested that. It can also be used for writing reading scripts in other programming languages, with some time investiment.

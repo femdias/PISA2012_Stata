@@ -40,7 +40,7 @@ for (i in 1:length(zip_files)){
   ######################################
 
   # Loading the dictionary using SAScii
-  dictionary <- parse.SAScii(sas_ri = paste0('input/PISA2012/SAS_read_files/', sas_files[i]))  
+  dictionary <- parse.SAScii(sas_ri = paste0('input/', sas_files[i]))  
 
   # Calculating start and end positions for each variable
   dictionary$start <- cumsum(c(1, dictionary$width[-nrow(dictionary)]))
@@ -50,7 +50,7 @@ for (i in 1:length(zip_files)){
   #    Reading type format part       #
   ######################################
   # Reading the SAS file
-  sas_content <- readLines(paste0('input/PISA2012/SAS_read_files/', sas_files[i])) 
+  sas_content <- readLines(paste0('input/', sas_files[i])) 
   
   # Combining the content into a single string
   sas_string <- paste(sas_content, collapse = "\n")
@@ -144,7 +144,7 @@ infix ///
   ######################################
   
   # Reading the SAS file
-  sas_content <- readLines(paste0('input/PISA2012/SAS_read_files/', sas_files[i]))
+  sas_content <- readLines(paste0('input/', sas_files[i]))
   
   # Combining the content into a single string
   sas_string <- paste(sas_content, collapse = "\n")
